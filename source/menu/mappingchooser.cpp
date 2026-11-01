@@ -39,7 +39,8 @@ const char * ClearHint(int hw)
 	switch(hw)
 	{
 		case INPUT_HW_GAMECUBE: return "Home or the C-Stick clears it.";
-		case INPUT_HW_DS4: return "PS clears it.";
+		case INPUT_HW_DS4:
+		case INPUT_HW_DS3: return "PS clears it.";
 	}
 	return "Home clears it.";
 }

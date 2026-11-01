@@ -152,6 +152,23 @@ void ResetControls(int consoleCtrl, int wiiCtrl)
 		btnmap[CTRL_PAD][INPUT_HW_DS4][i++] = INPUT_BTN_RIGHT;
 	}
 
+	if(consoleCtrl == -1 || (consoleCtrl == CTRL_PAD && wiiCtrl == INPUT_HW_DS3))
+	{
+		i=0;
+		btnmap[CTRL_PAD][INPUT_HW_DS3][i++] = INPUT_BTN_A;
+		btnmap[CTRL_PAD][INPUT_HW_DS3][i++] = INPUT_BTN_B;
+		btnmap[CTRL_PAD][INPUT_HW_DS3][i++] = INPUT_BTN_X;
+		btnmap[CTRL_PAD][INPUT_HW_DS3][i++] = INPUT_BTN_Y;
+		btnmap[CTRL_PAD][INPUT_HW_DS3][i++] = INPUT_TRIGGER_L;
+		btnmap[CTRL_PAD][INPUT_HW_DS3][i++] = INPUT_TRIGGER_R;
+		btnmap[CTRL_PAD][INPUT_HW_DS3][i++] = INPUT_BTN_PLUS;
+		btnmap[CTRL_PAD][INPUT_HW_DS3][i++] = INPUT_BTN_MINUS;
+		btnmap[CTRL_PAD][INPUT_HW_DS3][i++] = INPUT_BTN_UP;
+		btnmap[CTRL_PAD][INPUT_HW_DS3][i++] = INPUT_BTN_DOWN;
+		btnmap[CTRL_PAD][INPUT_HW_DS3][i++] = INPUT_BTN_LEFT;
+		btnmap[CTRL_PAD][INPUT_HW_DS3][i++] = INPUT_BTN_RIGHT;
+	}
+
 	/*** Xbox 360 Padmap ***/
 	if(consoleCtrl == -1 || (consoleCtrl == CTRL_PAD && wiiCtrl == INPUT_HW_XBOX360))
 	{
@@ -252,6 +269,13 @@ void ResetControls(int consoleCtrl, int wiiCtrl)
 		btnmap[CTRL_SCOPE][INPUT_HW_DS4][i++] = INPUT_BTN_X;
 		btnmap[CTRL_SCOPE][INPUT_HW_DS4][i++] = INPUT_BTN_PLUS;
 		i=0;
+		btnmap[CTRL_SCOPE][INPUT_HW_DS3][i++] = INPUT_BTN_B;
+		btnmap[CTRL_SCOPE][INPUT_HW_DS3][i++] = INPUT_BTN_A;
+		btnmap[CTRL_SCOPE][INPUT_HW_DS3][i++] = INPUT_BTN_MINUS;
+		btnmap[CTRL_SCOPE][INPUT_HW_DS3][i++] = INPUT_BTN_Y;
+		btnmap[CTRL_SCOPE][INPUT_HW_DS3][i++] = INPUT_BTN_X;
+		btnmap[CTRL_SCOPE][INPUT_HW_DS3][i++] = INPUT_BTN_PLUS;
+		i=0;
 		btnmap[CTRL_SCOPE][INPUT_HW_XBOX360][i++] = INPUT_BTN_B;
 		btnmap[CTRL_SCOPE][INPUT_HW_XBOX360][i++] = INPUT_BTN_A;
 		btnmap[CTRL_SCOPE][INPUT_HW_XBOX360][i++] = INPUT_BTN_MINUS;
@@ -289,6 +313,8 @@ void ResetControls(int consoleCtrl, int wiiCtrl)
         btnmap[CTRL_MOUSE][INPUT_HW_DRC][1] = INPUT_BTN_B;
         btnmap[CTRL_MOUSE][INPUT_HW_DS4][0] = INPUT_BTN_A;
         btnmap[CTRL_MOUSE][INPUT_HW_DS4][1] = INPUT_BTN_B;
+        btnmap[CTRL_MOUSE][INPUT_HW_DS3][0] = INPUT_BTN_A;
+        btnmap[CTRL_MOUSE][INPUT_HW_DS3][1] = INPUT_BTN_B;
         btnmap[CTRL_MOUSE][INPUT_HW_XBOX360][0] = INPUT_BTN_A;
         btnmap[CTRL_MOUSE][INPUT_HW_XBOX360][1] = INPUT_BTN_B;
         btnmap[CTRL_MOUSE][INPUT_HW_GENERIC_USB][0] = INPUT_BTN_A;
@@ -316,6 +342,9 @@ void ResetControls(int consoleCtrl, int wiiCtrl)
         btnmap[CTRL_JUST][INPUT_HW_DS4][0] = INPUT_BTN_B;
         btnmap[CTRL_JUST][INPUT_HW_DS4][1] = INPUT_BTN_A;
         btnmap[CTRL_JUST][INPUT_HW_DS4][2] = INPUT_BTN_PLUS;
+        btnmap[CTRL_JUST][INPUT_HW_DS3][0] = INPUT_BTN_B;
+        btnmap[CTRL_JUST][INPUT_HW_DS3][1] = INPUT_BTN_A;
+        btnmap[CTRL_JUST][INPUT_HW_DS3][2] = INPUT_BTN_PLUS;
         btnmap[CTRL_JUST][INPUT_HW_XBOX360][0] = INPUT_BTN_B;
         btnmap[CTRL_JUST][INPUT_HW_XBOX360][1] = INPUT_BTN_A;
         btnmap[CTRL_JUST][INPUT_HW_XBOX360][2] = INPUT_BTN_PLUS;

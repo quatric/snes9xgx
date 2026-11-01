@@ -326,6 +326,12 @@ Network Shares (SMB) uses `libsmb2` on all three platforms, with the SMB dialect
 
 ---
 
+### DualShock 3 and GameCube Controller Adapter (Wii)
+
+A DualShock 3 or Sixaxis plugged into the Wii's USB port works as a controller and shows up in **Button Mappings** while connected (Circle is A, Cross is B, Triangle is X, Square is Y). Building it needs [libsicksaxis](https://github.com/xerpi/libsicksaxis) installed, as the CI build does; without it, remove `-DHAVE_SICKSAXIS` and `-lsicksaxis` from `Makefile.wii`.
+
+Nintendo's GameCube controller adapter for Wii U (and third-party ones that copy it) is read through IOS's USB module, in the same way as the console's own GameCube ports, so all four of its pads use the GameCube mappings, and rumble works with the adapter's power cable plugged in. The driver comes from [libwiiinput](https://github.com/quatric/libwiiinput) (GPL-3.0-or-later, from RiftWii) in `source/drivers/ogc/wii/input/libwiiinput`.
+
 ### USB Mouse and Drawing Tablet (Wii)
 
 A USB mouse, pen tablet or THQ uDraw GameTablet moves the on-screen cursor for player 1, both in the menus and in games that use a pointer (Super Scope, Justifier, SNES Mouse). While it is being used it steers the cursor instead of the Wii Remote's pointer; the Wii Remote takes over again once the mouse or pen has been idle for a few seconds. A tablet reports absolute positions, a mouse relative ones, and each carries on from where the other left off.

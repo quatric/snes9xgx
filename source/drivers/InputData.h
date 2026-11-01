@@ -47,7 +47,8 @@ enum GuiHardwareProfile : uint32_t {
     INPUT_HW_XBOX360  = 7,
     INPUT_HW_GENERIC_USB = 8,   // Retrode, Hornet, Mayflash (SNES-style USB pads)
     INPUT_HW_USBPOINTER = 9,    // USB mouse or pen tablet: aims with the cursor, buttons A (left / pen tip), B (right), X (middle)
-    INPUT_HW_MAX      = 10
+    INPUT_HW_DS3 = 10,          // DualShock 3 / Sixaxis through libsicksaxis
+    INPUT_HW_MAX      = 11
 };
 
 /**

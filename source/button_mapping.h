@@ -15,7 +15,7 @@
 #include "drivers/InputData.h"
 
 const char ctrlrName[INPUT_HW_MAX][32] =
-{ "GameCube Controller", "Wiimote", "Nunchuk + Wiimote", "Classic Controller", "Wii U Pro Controller", "Wii U Gamepad", "DualShock 4", "Xbox 360 Controller", "USB Controller", "USB Mouse / Tablet" };
+{ "GameCube Controller", "Wiimote", "Nunchuk + Wiimote", "Classic Controller", "Wii U Pro Controller", "Wii U Gamepad", "DualShock 4", "Xbox 360 Controller", "USB Controller", "USB Mouse / Tablet", "DualShock 3" };
 
 typedef struct _btn_map {
 	uint32_t btn;					// button 'id'

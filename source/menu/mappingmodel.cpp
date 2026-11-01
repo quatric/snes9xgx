@@ -82,7 +82,8 @@ const ControllerLayout& MappingLayout(int hw, bool sideways)
 		case INPUT_HW_CLASSIC: return ClassicControllerLayout();
 		case INPUT_HW_WUPC: return WiiUProControllerLayout();
 		case INPUT_HW_DRC: return GamePadControllerLayout();
-		case INPUT_HW_DS4: return DS4ControllerLayout();
+		case INPUT_HW_DS4:
+		case INPUT_HW_DS3: return DS4ControllerLayout();
 		case INPUT_HW_XBOX360: return Xbox360ControllerLayout();
 		case INPUT_HW_GENERIC_USB: return UsbControllerLayout();
 		default: break;

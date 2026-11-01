@@ -191,7 +191,8 @@ class ControllerStatus
 				case INPUT_HW_NUNCHUK: return NUNCHUK;
 				case INPUT_HW_WIIMOTE: return WIIMOTE;
 				case INPUT_HW_GAMECUBE: return GAMECUBE;
-				case INPUT_HW_DS4: return DUALSHOCK4;
+				case INPUT_HW_DS4:
+				case INPUT_HW_DS3: return DUALSHOCK4;
 				case INPUT_HW_XBOX360: return XBOX_360;
 				case INPUT_HW_GENERIC_USB: return USB_PAD;
 				default: return NONE;

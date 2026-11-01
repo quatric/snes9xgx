@@ -69,7 +69,7 @@ std::vector<int> HardwareList(int ctrl)
 		v.push_back(INPUT_HW_CLASSIC);
 		v.push_back(INPUT_HW_WUPC);
 		const InputPadData * pad = PadData();
-		static const int optional[] = { INPUT_HW_DRC, INPUT_HW_DS4, INPUT_HW_XBOX360, INPUT_HW_GENERIC_USB };
+		static const int optional[] = { INPUT_HW_DRC, INPUT_HW_DS4, INPUT_HW_DS3, INPUT_HW_XBOX360, INPUT_HW_GENERIC_USB };
 		for(size_t i = 0; i < sizeof(optional) / sizeof(optional[0]); i++)
 			if(pad && pad->hw_connected[optional[i]])
 				v.push_back(optional[i]);

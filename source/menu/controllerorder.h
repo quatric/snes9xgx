@@ -32,7 +32,7 @@ inline int FirstConnected(const InputPadData& pad, const int * list, size_t coun
 //!The USB controller on this channel, in the order DualShock 4, Xbox 360, other; INPUT_HW_MAX if none
 inline int UsbHardware(const InputPadData& pad)
 {
-	static const int order[] = { INPUT_HW_DS4, INPUT_HW_XBOX360, INPUT_HW_GENERIC_USB };
+	static const int order[] = { INPUT_HW_DS4, INPUT_HW_DS3, INPUT_HW_XBOX360, INPUT_HW_GENERIC_USB };
 	return FirstConnected(pad, order, sizeof(order) / sizeof(order[0]));
 }
 
