@@ -328,15 +328,15 @@ Network Shares (SMB) uses `libsmb2` on all three platforms, with the SMB dialect
 
 ### USB Mouse and Drawing Tablet (Wii)
 
-A USB mouse or pen tablet moves the on-screen cursor for player 1, both in the menus and in games that use a pointer (Super Scope, Justifier, SNES Mouse). While it is being used it steers the cursor instead of the Wii Remote's pointer; the Wii Remote takes over again once the mouse or pen has been idle for a few seconds. A tablet reports absolute positions, a mouse relative ones, and each carries on from where the other left off.
+A USB mouse, pen tablet or THQ uDraw GameTablet moves the on-screen cursor for player 1, both in the menus and in games that use a pointer (Super Scope, Justifier, SNES Mouse). While it is being used it steers the cursor instead of the Wii Remote's pointer; the Wii Remote takes over again once the mouse or pen has been idle for a few seconds. A tablet reports absolute positions, a mouse relative ones, and each carries on from where the other left off.
 
 | Mouse / pen | Button | Super Scope | Justifier | SNES Mouse |
 |---|---|---|---|---|
-| Left click / pen tip | A | Fire | Fire | Left |
-| Right click / lower pen switch | B | Aim offscreen | Aim offscreen | Right |
-| Middle click / upper pen switch | X | Pause | Start | |
+| Left click / pen tip / uDraw pen | A | Fire | Fire | Left |
+| Right click / lower pen switch / lower rocker | B | Aim offscreen | Aim offscreen | Right |
+| Middle click / upper pen switch / upper rocker | X | Pause | Start | |
 
-Plug it in before or during play. Other controllers keep working alongside it. The tablet driver comes from [libwiiinput](https://github.com/quatric/libwiiinput) (`source/drivers/ogc/wii/input/libwiiinput`).
+Plug it in before or during play. Other controllers keep working alongside it. The uDraw can be plugged into any Wii Remote; its own Wii Remote buttons are not used. The tablet drivers come from [libwiiinput](https://github.com/quatric/libwiiinput) (`source/drivers/ogc/wii/input/libwiiinput`).
 
 ## File Browser
 

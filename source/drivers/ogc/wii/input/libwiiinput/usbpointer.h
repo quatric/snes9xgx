@@ -10,8 +10,11 @@
  * absolute positions and the mouse relative ones; whichever moved last wins, and
  * the other carries on from where it left off.
  *
- * Needs -DHAVE_TABLET and -Wl,--wrap=USB_GetDeviceList, which hides tablets from
- * libogc's mouse driver (a tablet also presents itself as a mouse).
+ * The THQ uDraw GameTablet on a Wii Remote comes through the same calls (lower rocker is right,
+ * upper rocker is middle).
+ *
+ * Needs -DHAVE_TABLET and -Wl,--wrap=classic_ctrl_handshake,--wrap=parse_event,--wrap=USB_GetDeviceList
+ * (the last hides tablets from libogc's mouse driver, as a tablet also presents itself as a mouse).
  */
 
 #ifdef HW_RVL

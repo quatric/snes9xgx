@@ -1,9 +1,7 @@
 #ifndef LIBINPUT_INTERNAL_H
 #define LIBINPUT_INTERNAL_H
 
-/* Trimmed from libwiiinput: only what the pen tablet driver needs. snes9xgx reads
- * the Wii Remotes itself, so the uDraw GameTablet (which needs wiiuse hooks) is
- * left out and these report "no uDraw". */
+/* Trimmed from libwiiinput: only what the pen tablet and uDraw drivers need. */
 
 #include <gctypes.h>
 #include <stdbool.h>
