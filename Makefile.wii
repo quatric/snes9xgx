@@ -21,7 +21,7 @@ TARGET		:=	snes9xgx-wii
 TARGETDIR	:=	executables
 BUILD		:=	build_wii
 SOURCES		:=	source source/menu source/libgui source/widgets source/utils source/utils/sz \
-				source/drivers source/drivers/ogc source/drivers/ogc/wii source/drivers/ogc/wii/input \
+				source/drivers source/drivers/ogc source/drivers/ogc/wii source/drivers/ogc/wii/input source/drivers/ogc/wii/input/libwiiinput \
 				source/snes9x source/snes9x/apu
 DATA		:=	data/images data/sounds data/fonts data/lang
 INCLUDES	:=	source source/snes9x
@@ -32,7 +32,7 @@ INCLUDES	:=	source source/snes9x
 
 # -fno-strict-aliasing to prevent GCC 16 from breaking legacy type-punning.
 CFLAGS	= -g -O3 -Wall $(MACHDEP) $(INCLUDE) $(FREETYPE_CFLAGS) \
-				-DSNES9XGX \
+				-DSNES9XGX -DHAVE_TABLET \
 				-DHAVE_STDINT_H -DBLARGG_NONPORTABLE -DBLARGG_BIG_ENDIAN -DBLARGG_CPU_POWERPC \
 				-DZLIB -DRIGHTSHIFT_IS_SAR -DCPU_SHUTDOWN -DCORRECT_VRAM_READS \
 				-D_SZ_ONE_DIRECTORY -D_LZMA_IN_CB -D_LZMA_OUT_READ \
@@ -47,6 +47,8 @@ CFLAGS	= -g -O3 -Wall $(MACHDEP) $(INCLUDE) $(FREETYPE_CFLAGS) \
 CXXFLAGS	=	$(CFLAGS) -Wno-register -fno-exceptions -fno-rtti -fno-threadsafe-statics
 
 LDFLAGS	=	-g -O3 $(MACHDEP) -Wl,-Map,$(notdir $@).map -Wl,--gc-sections
+# libwiiinput's pen tablet driver hides tablets from libogc's USB mouse driver
+LDFLAGS +=	-Wl,--wrap=USB_GetDeviceList
 LDFLAGS +=	-L../buildtools
 
 #---------------------------------------------------------------------------------

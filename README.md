@@ -326,6 +326,18 @@ Network Shares (SMB) uses `libsmb2` on all three platforms, with the SMB dialect
 
 ---
 
+### USB Mouse and Drawing Tablet (Wii)
+
+A USB mouse or pen tablet moves the on-screen cursor for player 1, both in the menus and in games that use a pointer (Super Scope, Justifier, SNES Mouse). While it is being used it steers the cursor instead of the Wii Remote's pointer; the Wii Remote takes over again once the mouse or pen has been idle for a few seconds. A tablet reports absolute positions, a mouse relative ones, and each carries on from where the other left off.
+
+| Mouse / pen | Button | Super Scope | Justifier | SNES Mouse |
+|---|---|---|---|---|
+| Left click / pen tip | A | Fire | Fire | Left |
+| Right click / lower pen switch | B | Aim offscreen | Aim offscreen | Right |
+| Middle click / upper pen switch | X | Pause | Start | |
+
+Plug it in before or during play. Other controllers keep working alongside it. The tablet driver comes from [libwiiinput](https://github.com/quatric/libwiiinput) (`source/drivers/ogc/wii/input/libwiiinput`).
+
 ## File Browser
 
 The File Browser loads automatically on startup and lists the contents of your `snes9xgx/roms` folder (or wherever you've pointed Load Folder — see [Storage](#storage)). Click a game — uncompressed, or zipped in a `.zip`/`.7z` archive — to load it, or click **Up One Level** to navigate.
